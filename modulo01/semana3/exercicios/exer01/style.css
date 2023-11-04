@@ -1,0 +1,90 @@
+
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+}
+
+main h1 {
+    color: rgb(92, 92, 102);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#imgTruck96 {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+#btnTry {
+    background-color: rgba(0, 0, 255, 0.568);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    
+    font-size: 14px;
+}
+
+
+.input-wrapper input {
+    border: 2px solid #adadc0;
+    border-radius: 3px;
+    height: 40px;
+    width: 180px;
+    padding: 0 14px; /*para que o texto escrito dentro de input tivesse um padding e não começasse grudado na bordar quando a pessoa fosse digitar*/
+    line-height: 26px;
+}
+
+.input-wrapper input::placeholder{
+    color: #adadc0ad;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+section {
+    text-align: center;
+    color: rgb(92, 92, 102);
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+
+section button {
+    padding-top: 50px;
+}
+
+.hide {
+    display: none;
+}
+
+.resul {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#btnReset {
+    background-color: #81818d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    font-size: 14px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Frete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="screen1">
+            <h1>Cálculo de Frete</h1>
+            <img id="imgTruck96" src="imagens/truck96.png" alt="">
+            <form class="input-wrapper">
+                <input type="text" id="inputPesoProduto" placeholder="Peso do produto(kg)">
+                <input type="text" id="inputDistanciaTrajeto" placeholder="Distância do trajeto(km)">
+                <button id="btnTry">Calcular</button>
+            </form>
+        </div>
+
+        <section class="screen2 hide">
+            <div class="resul">
+                <img src="imagens/truck64.png" alt=""><!---->
+                <h3>Valor a pagar R$: </h3>
+                
+            </div>
+            <button id="btnReset">Calcular Novamente</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
