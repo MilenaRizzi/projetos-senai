@@ -1,0 +1,95 @@
+@charset "UTF-8";
+body {
+    min-width: 400px;
+}
+
+.screen1 {
+    text-align: center;
+}
+
+
+.screen1 h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+
+}
+
+.input-wrapper input {
+    border: 2px solid #adadc0;
+    border-radius: 3px;
+    height: 40px;
+    width: 15%;
+    padding: 0 14px; 
+    line-height: 26px;
+    min-width: 100px;
+
+}
+
+.input-wrapper input::placeholder{
+    color: #adadc0ad;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+#btnCalc{
+    background-color: rgba(0, 0, 255, 0.568);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+
+.screen2 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.screen2 h2 {
+    font-weight: normal;
+    
+}
+
+#pMensal, #pAnual {
+    font-size: 22px;
+    padding: 15px;
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    background-color: rgba(0, 140, 255, 0.164);
+    border-radius: 50px;
+    border: solid rgba(0, 140, 255, 0.788);
+    margin-bottom: 10px;
+}
+
+#pAnual {
+    background-color: rgba(11, 133, 31, 0.219);
+    border: solid rgb(12, 145, 34);
+}
+
+#btnReset{
+    margin-top: 30px;
+    background-color: #81818d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    font-size: 14px;
+}

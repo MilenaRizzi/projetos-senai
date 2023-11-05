@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Média</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="screen1">  
+            <h1>Cálculo Média</h1>
+            <form class="input-wrapper">
+                <input type="text" id="inputNota1" placeholder="Nota 1">
+                <input type="text" id="inputNota2" placeholder="Nota 2">
+                <input type="text" id="inputNota3" placeholder="Nota 3">
+                <button id="btnCalc">Calcular</button>
+            </form>
+        </div>
+        <div class="screen2 hide">
+            <h2>Resultado</h2>
+            <p id="recuperacao">Em recuperação</p>
+            <button id="btnReset1">Calcular Novamente</button>
+        </div>
+
+        <div class="screen3 hide">
+            <h2>Resultado</h2>
+            <p id="aprovado">Aprovado</p>
+            <button id="btnReset2">Calcular Novamente</button>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
