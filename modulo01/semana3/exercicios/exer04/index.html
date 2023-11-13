@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Férias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="screen1">
+            <form class="input-wrapper">
+                <div class="name">
+                    <div class="form-groupName">
+                        <label for="inputName" id="labelName">Nome do funcionário</label>
+                        <input type="text" id="inputName">
+                    </div>
+
+                </div>
+
+                <div class="dates">
+                    <div class="form-groupDataInicio">
+                        <label for="inputDateStart" id="labelDataInicio">Data de início</label>
+                        <input type="text" id="inputDateStart">
+                    </div>
+
+                    <div class="form-groupDataFim">
+                        <label for="inputDateEnd" id="labelDataFim">Data de término</label>
+                        <input type="text" id="inputDateEnd">
+                    </div>
+                </div>
+
+                <button class="btn-gerar">Gerar Carta</button>
+            </form>
+            </form>
+        </div>
+
+        <div class="screen2 hide">
+            <p></p>
+            <button class="btn-reset">Gerar outra carta</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
