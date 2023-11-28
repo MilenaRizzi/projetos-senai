@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+        <h1>Lista de Afazeres</h1>
+        <form id="todo-form">
+            <div class="input">
+                <input type="text" id="new-task" placeholder="Adicionar nova tarefa">
+                <button type="button" class="btn-adicionar" onclick="addTask()">Adicionar</button>
+            </div>
+            <table id="task-list">
+                <!-- Lista de tarefas vai aqui -->
+                <tr class="task-item">
+                    <td class="checkbox-wrapper">
+                        <input type="checkbox" id="event-private1">
+                        <label for="event-private1" id="label1">Estudar HTML e CSS</label>
+                    </td>
+                    <td><button type="button" class="btn-excluir" onclick="deleteTask(this)"><img src="imagens/delete16px.png" alt=""></button></td>
+                </tr>
+                <tr class="task-item">
+                    <td class="checkbox-wrapper">
+                        <input type="checkbox" id="event-private1">
+                        <label for="event-private1" id="label1">Estudar JavaScript</label>
+                    </td>
+                    <td><button type="button" class="btn-excluir" onclick="deleteTask(this)"><img src="imagens/delete16px.png" alt=""></button></td>
+                </tr>
+                <tr class="task-item">
+                    <td class="checkbox-wrapper">
+                        <input type="checkbox" id="event-private1">
+                        <label for="event-private1" id="label1">Fazer Exercicios</label>
+                    </td>
+                    <td><button type="button" class="btn-excluir" onclick="deleteTask(this)"><img src="imagens/delete16px.png" alt=""></button></td>
+                </tr>
+                <!-- Repita a estrutura acima para cada tarefa -->
+            </table>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

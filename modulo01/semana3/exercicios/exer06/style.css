@@ -1,0 +1,67 @@
+body {
+    text-align: center;
+}
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+table {
+    margin: auto;
+    text-align: justify;
+    width: 30%;
+    border-collapse: collapse;
+    /* CSS2*/
+    margin-bottom: 30px;
+}
+
+table td {
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    padding: 10px;
+
+}
+
+table th {
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    padding: 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.inputs input {
+    border: 2px solid #adadc0;
+    border-radius: 3px;
+    height: 40px;
+    padding: 0 14px;
+    width: 25%;
+}
+
+
+.hide {
+    display: none;
+} 
+ #valor-pedido {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 40px;
+    font-size: 20px
+}
+
+#agradecimento {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.btn-fazer-pedido, .btn-novo-pedido  {
+    background-color: rgba(38, 0, 255, 0.644);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 14px;
+    min-width: 120px;
+    max-width: 220px;
+    margin-top: 30px;
+}

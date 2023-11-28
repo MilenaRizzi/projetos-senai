@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lanchonete</title>
+</head>
+
+<body>
+    <div class="pagina-inicial">
+        <h1>Lanchonete Online</h1>
+
+        <table class="table-total">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1123</td>
+                    <td>Hambúrguer</td>
+                    <td>R$ 12,00</td>
+                </tr>
+                <tr>
+                    <td>3423</td>
+                    <td>Sanduíche de pernil</td>
+                    <td>R$ 9,00</td>
+                </tr>
+                <tr>
+                    <td>4521</td>
+                    <td>Bauru</td>
+                    <td>R$ 15,00</td>
+                </tr>
+                <tr>
+                    <td>5322</td>
+                    <td>Sanduíche de mortadela</td>
+                    <td>R$ 34,99</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="inputs">
+            <input type="text" name="codigo-prod" id="codigo-prod" placeholder="Qual o código do produto?" />
+
+            <input type="number" name="quantidade" id="quantidade" placeholder="Quantidade" />
+            <button class="btn-fazer-pedido" id="pedir">Fazer perdido</button>
+        </div>
+    </div>
+    <div class="resultado hide">
+        <p id="valor-pedido"></p>
+        <p id="agradecimento"></p>
+        <button class="btn-novo-pedido" id="novo-pedido">Fazer outro pedido</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
