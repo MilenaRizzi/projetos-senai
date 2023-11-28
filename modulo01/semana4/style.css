@@ -22,21 +22,6 @@ h1 {
 ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 290px;
-}
-
-li {
-    background: #fff;
-    width: 330px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid rgba(0, 0, 0, 0.349); /* Largura, estilo e cor da borda */
-    border-radius: 3px;
-    padding: 8px;
 }
 
 .input-adicionar {
@@ -46,26 +31,20 @@ li {
     padding: 5px 8px;
 }
 
-.task-list {
-    display: flex;
-    flex-direction: column;
-    width: 330px;
-}
 
-.task-item {
+li {
+    justify-content: space-between;
     background: #fff;
-    margin: 10px 20px 18px 20px;
+    margin: 10px 0px 0px 0px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border: 1px solid rgba(0, 0, 0, 0.349); /* Largura, estilo e cor da borda */
     border-radius: 3px;
     padding: 8px;
-    
-
+    width: 260px;
 }
 
-.task-item input:checked + label {
+.task-list input:checked + label {
     text-decoration: line-through;
 }
 
