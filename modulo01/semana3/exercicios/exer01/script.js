@@ -20,7 +20,7 @@
 
 //     document.querySelector('section').classList.toggle('hide')//toggle é para que caso não haja a classe qnd eu clicar ela vai aparecer, e caso ela esteja aparecendo qnd eu clica ela vai sumir
 
-//     //o evento todo de clique então é capturado, e por padrão, como estou lidando com formulário, todo formulário é enviado para algum lugar, e isso faz o recarregamento da página. Dessa forma, quando eu coloco esse prenvetDefault, eu estou dizendo para que esse padrão de envio seja ignorado. Para que o formulário
+//o evento todo de clique então é capturado, e por padrão, como estou lidando com formulário, todo formulário é enviado para algum lugar, e isso faz o recarregamento da página. Dessa forma, quando eu coloco esse prenvetDefault, eu estou dizendo para que esse padrão de envio seja ignorado. Para que o formulário
 //     e.preventDefault();
 // }
 

@@ -12,28 +12,27 @@
     <div class="todo-container">
         <h1>Lista de Afazeres</h1>
        
-        <input class="input-adicionar" type="text" id="taskInput" placeholder="Adicionar nova tarefa">
-      
-        <button type="button" class="btn-adicionar" onclick="addTask()">Adicionar</button>
+        <div id="formulario">
+            <input class="input-adicionar" type="text" id="taskInput" placeholder="Adicionar nova tarefa">
+            <button type="button" class="btn-adicionar" onclick="addTask()">Adicionar</button>
+        </div>
         
         <ul class="novas-tarefas" id="taskList">
             <!-- Tasks will be added here dynamically -->
             <li class="task-list">
                     <input type="checkbox" id="task1" class="task-checkbox">
-                   
-                    <label for="task1" class="task-text">Estudar HTML e CSS</label>
-                    
+                    <span>Estudar HTML e CSS</span>
                     <button class="delete-btn" ><img src="imagens/delete16px.png" alt=""></button>
             </li>
             <li class="task-list">
                 <input type="checkbox" id="task2" class="task-checkbox">
-                <label for="task2" class="task-text">Estudar Java Script</label>
+                <span>Estudar Java Script</span>
                 <button class="delete-btn" ><img src="imagens/delete16px.png" alt=""></button>
             </li>
-            
+
             <li class="task-list">
                 <input type="checkbox" id="task3" class="task-checkbox">
-                <label for="task3" class="task-text">Fazer Exercícios</label>
+                <span>Fazer Exercícios</span>
                 <button class="delete-btn" ><img src="imagens/delete16px.png" alt=""></button>
             </li>
         </ul>

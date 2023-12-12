@@ -1,36 +1,43 @@
 @charset "UTF-8";
+
 body {
     font-family: Arial, sans-serif;
     background-color: rgba(255, 228, 196, 0.596);
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
 }
 
+.todo-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    
+}
 
 h1 {
     padding-left: 22px;
 }
 
-.todo-container {
-    padding-left: 20px;
-    
+#formulario {
+    display: flex;
+    gap: 10px;
 }
 
-
-ul {
-    list-style-type: none;
+#taskList{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     padding: 0;
 }
 
 .input-adicionar {
-    width: 190px;
     border: 1px solid rgba(0, 0, 0, 0.349); /* Largura, estilo e cor da borda */
     border-radius: 3px;
+    height: 25px;
     padding: 5px 8px;
+    /*p elemento vai tomar o maior espaço que ele conseguir e vai encolher os outros elementos*/
+    flex-grow: 1;
 }
-
 
 li {
     justify-content: space-between;
@@ -38,16 +45,27 @@ li {
     margin: 10px 0px 0px 0px;
     display: flex;
     align-items: center;
+    gap: 8px;
     border: 1px solid rgba(0, 0, 0, 0.349); /* Largura, estilo e cor da borda */
     border-radius: 3px;
     padding: 8px;
-    width: 260px;
 }
 
-.task-list input:checked + label {
+.task-list span {
+   flex-grow: 1; 
+   text-align: center;
+}
+
+/*para deixar o texto grifado apenas quando o checkbox estiver marcado
+* para solucionar isso daqui eu também poderia ter feito uma classe no meu span, e ai apenas referenciado a classe ex: .ricado:checked e ai coloco o text-decoration*/
+.task-list > .task-checkbox:checked + span {
     text-decoration: line-through;
 }
 
+/* quando eu quero dar cor ao botão quando eu clicar
+button:active {
+    background-color: aqua;
+} */
 .btn-adicionar {
     padding: 5px 10px;
     cursor: pointer;
