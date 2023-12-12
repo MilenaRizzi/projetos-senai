@@ -5,8 +5,7 @@ const repositorios = document.querySelector("#span-repositorio");
 const avatar = document.querySelector("#span-avatar");
 
 
-async function buscaPefilGitHub() {
-    const userName = userNameInput.value;
+async function buscaPefilGitHub(userName) {
     try {
         const url = `https://api.github.com/users/${userName}`;
         const resposta = await fetch(url);
@@ -20,4 +19,10 @@ async function buscaPefilGitHub() {
     }
 }
 
-botaoBuscaPerfil.addEventListener("click", buscaPefilGitHub);
+botaoBuscaPerfil.addEventListener("click", () => {
+    const userName = userNameInput.value;
+  
+    if (userName) {
+        buscaPefilGitHub(userName);
+    }
+  });

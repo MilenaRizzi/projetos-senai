@@ -3,8 +3,7 @@ const btnBuscaCep = document.querySelector("#btnBuscaCep");
 const spanLocal = document.querySelector("#span-local");
 
 
-async function buscaCEP() {
-    const cep = inputCep.value;
+async function buscaCEP(cep) {
     try {
       const url = `https://viacep.com.br/ws/${cep}/json`;
       const resposta = await fetch(url);
@@ -20,5 +19,11 @@ async function buscaCEP() {
     }
   }
   
-  btnBuscaCep.addEventListener("click", buscaCEP);
+  btnBuscaCep.addEventListener("click", () => {
+    const cepInformado = inputCep.value.trim();
+  
+    if (cepInformado) {
+      buscaCEP(cepInformado);
+    }
+  });
   
