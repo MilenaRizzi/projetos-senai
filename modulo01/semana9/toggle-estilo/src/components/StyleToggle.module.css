@@ -1,0 +1,16 @@
+/* src/StyleToggle.css */
+.StyleToggle {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .LightStyle {
+    background: #fff;
+    color: #333;
+  }
+  
+  .DarkStyle {
+    background: #333;
+    color: #fff;
+  }
+  
