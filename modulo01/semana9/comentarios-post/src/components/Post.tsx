@@ -87,7 +87,7 @@ export function Post() {
                     name="comment"
                     placeholder="Digite seu comentário"
                     onChange={handleNewCommentChange}
-                />
+                /> 
 
                 <footer>
                     <button onClick={handleCommentCount} className={styles.buttonComment} type="submit">

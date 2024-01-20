@@ -1,0 +1,110 @@
+.content {
+    margin: auto;
+    min-width: 300px;
+    max-width: 736px;
+}
+
+.form {
+    margin-top: 20px;
+    background: #FAFAFC;
+    border-radius: 8px 8px 0px 0px;
+    min-height: 300px;
+    padding: 50px;
+
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.60rem;
+}
+
+.inputWrapper label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #4E4958;
+    margin-bottom: 10px;
+}
+
+.inputWrapper input, select {
+    border-radius: 8px;
+    border: 1px solid var(--Back-Lines-in-white, #E6E6F0);
+    background: #e8e8eb91;
+    height: 56px;
+    padding: 0 24px;
+    /*para que o texto escrito dentro de input tivesse um padding e não começasse grudado na bordar quando a pessoa fosse digitar*/
+    line-height: 1.5rem;
+}
+
+.inputWrapper label span {
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9f99ad;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+.enviar {
+    padding-top: 0.5rem ; 
+    text-align: center;
+}
+
+.btnEnviar {
+    padding: 0.5rem 1rem;
+    background-color: #2e78e6e7;
+    border: 0;
+    color: rgb(245, 238, 238);
+    font-size: 1rem;
+    width: 5rem;
+}
+
+.btnEnviar:hover { 
+    background: #2E3EE6;
+}    
+
+.result {
+    margin-top: 35px;
+    background: #FAFAFC;
+    border-radius: 8px 8px 0px 0px;
+    min-height: 150px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.result > h2 {
+    margin: 1.75rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: #1198f8;
+    font-family: 'Archivo', sans-serif;
+}
+
+.userInfos {
+    border: 1px solid black;
+    border-radius: 6px;
+    max-width: 14rem;
+    padding: 1rem;
+    margin: 0 1rem;
+    line-height: 26px;
+
+}
+
+.userInfos > p {
+    font-family: 'Archivo', sans-serif;
+
+    color: rgba(0, 66, 114, 0.637);
+    font-size: 0.9rem;
+}
+
+.userInfos p span {
+    font-weight: normal;
+    font-family: sans-serif;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
