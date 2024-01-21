@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content input {
+  height: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+
+.content button {
+  width: 10rem;
+}
