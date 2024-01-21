@@ -39,6 +39,11 @@ export function UserList() {
         });
     }
 
+    function handleDeleteRegister(index: number) {
+        setUsers((prevUsers) => prevUsers.filter((_, i) => i !== index));
+    }
+
+
     return (
         <div className={styles.content}>
             <div>
@@ -48,7 +53,7 @@ export function UserList() {
                 <div className={styles.wrapper}>
                     <div className={styles.inputWrapper}>
                         <div className={styles.name}>
-                            <label htmlFor="name">Nome  <span>(digite um nome e sobrenome)</span></label>
+                            <label htmlFor="name">Nome<span>(digite um nome e sobrenome)</span></label>
                             <input
                                 name="name"
                                 type="text"
@@ -59,7 +64,7 @@ export function UserList() {
                     </div>
 
                     <div className={styles.inputWrapper}>
-                        <label htmlFor="age">Idade <span>(ex: 18 anos)</span></label>
+                        <label htmlFor="age">Idade<span>(ex: 18 anos)</span></label>
                         <input
                             type="text"
                             name="age"
@@ -69,7 +74,7 @@ export function UserList() {
                     </div>
 
                     <div className={styles.inputWrapper}>
-                        <label htmlFor="exp">Nível de Experiência <span>(iniciante, intermediário, avançado)</span></label>
+                        <label htmlFor="exp">Nível de Experiência<span>(iniciante, intermediário, avançado)</span></label>
                         <input
                             type="text"
                             name="exp"
@@ -79,7 +84,9 @@ export function UserList() {
 
 
                     <div className={styles.enviar}>
-                        <button className={styles.btnEnviar}>
+                        <button 
+                        className={styles.btnEnviar}
+                        disabled={!form}>
                             Enviar
                         </button>
                     </div>
@@ -89,11 +96,16 @@ export function UserList() {
                 users.length >= 1 && (
                     <div className={styles.result}>
                         <h2>Lista de Alunos Cadastrados</h2>
-                        {users.map((user) => (
+                        {users.map((user, index) => (
                             <div className={styles.userInfos}key={user.name}>
-                                <p>nome: <span>{user.name}</span></p>
+
+                                <div>
+                                    <p>nome: <span>{user.name}</span></p>
+                                    <button onClick={() => handleDeleteRegister(index)}>🗑️</button>
+                                </div>
                                 <p>idade:<span> {user.age} anos</span> </p>
                                 <p>experiência: <span>{user.exp}</span></p>
+                                <hr/>
                             </div>
                         ))}
                     </div>

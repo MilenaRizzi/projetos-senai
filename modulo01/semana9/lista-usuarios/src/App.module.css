@@ -10,7 +10,7 @@ body {
 body::before {
     content:''; /*o conteudo do que eu quero colocar antes do body, se eu escrevesse abc, apareceria acima do body*/
     width: 100vw;
-    height: 350px;
+    height: 250px;
     background: #121214;
 
     position: absolute;

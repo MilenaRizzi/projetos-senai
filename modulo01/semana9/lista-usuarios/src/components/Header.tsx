@@ -7,7 +7,7 @@ export function Header() {
 
             <div className={styles.headerContent}>
                 <h1>Cadastro de Alunos</h1>
-                <p>Preencha o formulário abaixo para fazer parte da nova turma do curso Futuro Dev - Senai</p>
+                <p>Preencha o formulário abaixo para fazer parte da nova turma do curso: <br/> Futuro Dev - Senai</p>
             </div>
         </div>
     )
