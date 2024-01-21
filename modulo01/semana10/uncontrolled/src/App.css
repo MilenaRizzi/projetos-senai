@@ -12,6 +12,10 @@
   gap: 1rem;
 }
 
+.content label {
+  font-size: 1.15rem;
+}
+
 .content input {
   height: 1.5rem;
   padding-left: 0.5rem;
@@ -19,5 +23,7 @@
 
 
 .content button {
-  width: 10rem;
+  width: 8rem;
+  font-size: 0.85rem;
+  font-weight: normal;
 }
