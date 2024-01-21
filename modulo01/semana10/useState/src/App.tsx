@@ -67,7 +67,7 @@ function App() {
             {
               feedbacksText.map((feedback, index) => {
                 return (
-                  <div className={styles.feedback}>
+                  <div key={feedback} className={styles.feedback}>
                     <p> {feedback} </p>
                     <button onClick={() => handleDeletFeedback(index)}>🗑️</button>
                   </div>
