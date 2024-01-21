@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    background: #2C2B3D;
+}
+
+.page {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.header img {
+    width: 8vw;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.content img {
+    width: 25rem;
+}
+
+.sectionContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionContent h1 {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 4rem 0 3rem 0;
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 40px;
+    color: #bc85ff;
+}
+
+.sectionContent p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 245, 232);
+}
+
+.sectionContent p>span {
+    color: #ff8378;
+}
+
+.inputInfo {
+    margin: 🇨enter;
+    margin-top: 2.5rem;
+    height: 3rem;
+    width: 20vw;
+    background: #7474758f;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+
+.inputInfo::placeholder {
+    color: #c4c4c4;
+    font-style: italic;
+}
+
+
+.btnEnviar {
+    margin-top: 2.5rem;
+    padding: 0.25rem 1rem;
+    font-size: 1rem;
+    background: #f8aca5;
+    border-radius: 4px;
+
+}
+
+.btnEnviar:hover {
+    background: #ff8378;
+}
+
+.feedbackList {
+    margin: 2rem;
+    margin-top: 2rem;
+    word-wrap: break-word;
+}
+
+.feedbackList h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2rem;
+    color: #bc85ff;
+    margin-bottom: 1rem;
+}
+
+.feedback {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid rgb(88, 86, 86);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.feedback p{
+    width: 170vh;
+}
+
+.feedback button {
+    background: #ee0101c2;
+    border: 0;
+    padding: 0.15rem;
+}
+
+.feedbackList p {
+    margin-left: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+}
+
