@@ -8,7 +8,7 @@
 }
 
 .member img {
-    width: 14%;
+    width: 3rem;
 }
 
 .memberInfos {
@@ -33,7 +33,15 @@
 
 .memberArea {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 20px;
-    justify-content: space-between;
+    padding: 20px auto; /* Aumentei a margem para 20px e centralizei o conteúdo */
+    max-width: 1700px; /* Aumentei a largura máxima para 1400px */
+}
+
+@media screen and (max-width: 768px) {
+    /* Quando a largura da tela for 768 pixels ou menos (tamanho de tablet), ajuste o layout */
+    .memberArea {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
 }

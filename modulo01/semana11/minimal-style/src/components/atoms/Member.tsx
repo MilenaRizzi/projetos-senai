@@ -7,7 +7,7 @@ interface MemberProps {
 export function Member( {role, name} : MemberProps) {
     return (
         <div className={styles.member}>
-            <img src="src\assets\userIcon32.png" alt="" />
+            <img src="src\assets\userIcon.png" alt="" />
             <div className={styles.memberInfos}>
                 <p>{role}</p>
                 <h2>{name}</h2>

@@ -1,5 +1,5 @@
 import { MenuItem } from "../atoms/MenuItem";
-import styles from "../../style/Header.module.css";
+import styles from "../../style/NavigationMenu.module.css";
 import { Button } from "../atoms/Button";
 import { AiOutlineSearch } from "react-icons/ai";
 

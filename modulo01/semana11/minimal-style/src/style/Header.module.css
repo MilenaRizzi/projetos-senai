@@ -3,56 +3,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 30px 0px;
-}
-
-
-.meuItems{
-    display: flex;
-    gap: 1.87rem;
-}
-
-.menuItem a {
-    text-decoration: none;
-    color: rgb(100, 100, 100);
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-    text-transform: uppercase;
-
-}
-
-.menuItem a::before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    width: 100%;
-    margin-bottom: 5px;
-    height: 2px; /* Altura do traço */
-    background-color: rgb(2, 114, 241); /* Cor do traço */
-    opacity: 0; /* Tornar o traço inicialmente invisível */
-    transition: opacity 0.3s; /* Adicionar transição de fade */
-  }
-  
-.menuItem a:hover::before {
-    opacity: 1; /* Tornar o traço visível quando o mouse passa sobre o link */
-  }
-.menuItem a:hover{
-    color: black;
-    font-weight: bold;
-
-}
-
-.navigationMenu {
-    display: flex;
-    gap: 30px;
-    font-size: 16px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navigationMenu p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
+    margin-top: 8px;
 }
 
 .buttonsNav Button {
@@ -83,12 +34,12 @@
  
 .section {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 .section p {
-    margin-bottom: 12px;
+    margin-bottom: 40px;
 }
 
 .sort {

@@ -6,7 +6,7 @@ export function Header() {
     return (
         <div className={styles.header}>
             <NavigationMenu />
-            <h1>Team <br/>Members</h1>
+            <h1>Team <br />Members</h1>
             <div className={styles.sectionContainer}>
                 <div className={styles.section}>
                     <p>Select team member to view profile</p>
