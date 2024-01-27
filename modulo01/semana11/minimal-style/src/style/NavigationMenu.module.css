@@ -1,4 +1,3 @@
-
 .meuItems{
     display: flex;
     gap: 1.87rem;
@@ -10,7 +9,6 @@
     font-family: 'Open Sans', sans-serif;
     position: relative;
     text-transform: uppercase;
-
 }
 
 .menuItem a::before {
@@ -28,10 +26,10 @@
 .menuItem a:hover::before {
     opacity: 1; /* Tornar o traço visível quando o mouse passa sobre o link */
   }
+
 .menuItem a:hover{
     color: black;
     font-weight: bold;
-
 }
 
 .navigationMenu {
@@ -45,6 +43,7 @@
 .navigationMenu p {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
+    font-size: 16px;
 }
 
 .buttonsNav {
@@ -64,9 +63,11 @@
 }
 
 .buttonsNav Button:nth-child(2){
-    border-radius: 15px;    
-    width: 125px;
-    height: 30px;
+    border-radius: 100px;
+    width: 175px;
+    height: 35px;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    padding: 4px 0;
+    font-size: 15px;
 }
