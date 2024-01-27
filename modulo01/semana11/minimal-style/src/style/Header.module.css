@@ -1,0 +1,112 @@
+.header {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+
+
+.meuItems{
+    display: flex;
+    gap: 1.87rem;
+}
+
+.menuItem a {
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+.menuItem a::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    margin-bottom: 5px;
+    height: 2px; /* Altura do traço */
+    background-color: rgb(2, 114, 241); /* Cor do traço */
+    opacity: 0; /* Tornar o traço inicialmente invisível */
+    transition: opacity 0.3s; /* Adicionar transição de fade */
+  }
+  
+.menuItem a:hover::before {
+    opacity: 1; /* Tornar o traço visível quando o mouse passa sobre o link */
+  }
+.menuItem a:hover{
+    color: black;
+    font-weight: bold;
+
+}
+
+.navigationMenu {
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigationMenu p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.buttonsNav Button {
+    background-color: white;
+    border: 2px solid rgba(128, 128, 128, 0.404);
+    margin-right: 24px ;
+}
+
+.buttonsNav Button:first-child {
+    border-radius: 50%;
+    padding: 5px 6px;
+}
+
+.buttonsNav Button:nth-child(2){
+    border-radius: 15px;    
+    width: 125px;
+    height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 55px 0 15px 0;
+    line-height: 49px;
+    font-size: 45px;
+
+}
+ 
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section p {
+    margin-bottom: 12px;
+}
+
+.sort {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.sort a {
+    text-decoration: none ;
+    color: gray;
+    font-family: Arial;
+}
+
+.sort a:hover {
+    color: black;
+}
+
+.sort img {
+    height: 30px;
+}
