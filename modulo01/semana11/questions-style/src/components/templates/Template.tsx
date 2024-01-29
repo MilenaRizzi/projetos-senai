@@ -1,11 +1,11 @@
-import { MembersArea } from "../molecules/MembersArea";
 import { Header } from "../organisms/Header";
+import { Main } from "../organisms/Main";
 
 export function Template() {
     return (
         <div>
           <Header/>
-          <MembersArea/>
+          <Main/>
         </div>
       )
 }

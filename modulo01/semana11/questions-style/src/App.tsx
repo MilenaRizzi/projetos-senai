@@ -1,13 +1,11 @@
 import './global.css'
-import { Header } from "./components/organisms/Header"
-import { Main } from "./components/organisms/Main"
+import { Template } from './components/templates/Template'
 
 function App() {
  
   return (
     <>
-     <Header/>
-     <Main/>
+    <Template/>
     </>
   )
 }
