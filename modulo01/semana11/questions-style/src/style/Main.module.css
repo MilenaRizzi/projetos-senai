@@ -1,0 +1,126 @@
+
+.contentMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questionConteiner {
+    margin: 70px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questionConteiner h1 {
+    padding: 12px;
+    font-weight: bold;
+}
+
+.questionConteiner > p {
+    margin-bottom: 20px;
+    font-size: 16px;
+   
+}
+
+.questionOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(128, 128, 128, 0.205);
+    border-radius: 5px;
+    padding: 25px 0 20px 0;
+}
+
+.selectedOption {
+    background-color: rgba(38, 0, 255, 0.685);
+    color: white;  
+    /* para melhorar a visibilidade do texto */
+}
+
+.questionOption:hover{
+    background: rgba(38, 0, 255, 0.685);
+    color: white;  
+
+}
+
+.questionOption img {
+    width: 35%;
+    margin: 22px 0;
+}
+
+.questionOption >  p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.questionsArea {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(48vh, 1fr)); /* Alterado para 3 colunas */
+    gap: 18px;
+    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    padding-top: 20px;
+    max-width: 1600px;
+}
+
+.buttons {
+    display: flex;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.buttons Button {
+    border: 2px solid rgba(128, 128, 128, 0.267);
+    border-radius: 8px;    
+}
+
+.buttons Button:first-child {
+   margin-right: 12px;
+   background: white;
+   padding: 5px;
+}
+.buttons Button:first-child:hover , .buttons Button:nth-child(2):hover {
+    border-color: black;
+    font-weight: bold;
+}
+
+.buttons Button:nth-child(2){
+    width: 160px;
+    text-align: center;
+    background: rgba(38, 0, 255, 0.685);
+    color: white;
+    font-weight: normal;
+    padding: 10px;
+
+}
+
+.progressBar {
+    width: 35%;
+    height: 14px;
+    background-color: #f0f0f0;
+    position: relative;
+    margin-top: 50px;
+    border-radius: 20px;
+
+}
+
+.progress {
+    height: 100%;
+    background-color: rgba(38, 0, 255, 0.685);
+    border-radius: 20px;
+    
+}
+
+.progressText {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: rgba(128, 128, 128, 0.692);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+
