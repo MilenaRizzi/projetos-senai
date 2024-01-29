@@ -8,17 +8,28 @@ export function Main() {
     const [currentStep, setCurrentStep] = useState(2);
     const totalSteps = 3;
 
-    const handleNext = () => {
+    const questions = [
+        "How would you describe your proficiency level in this area?",
+        "What is your estimate skill level?",
+        "In terms of expertise, would you classify yourself as?"
+    ];
+
+    const [currentQuestion, setCurrentQuestion] = useState(questions[currentStep - 1]);
+
+     function handleNext() {
         if (currentStep < totalSteps) {
             setCurrentStep(currentStep + 1);
+            setCurrentQuestion(questions[currentStep]);
         }
-    };
+    }
 
-    const handleBack = () => {
+    function handleBack() {
         if (currentStep > 1) {
             setCurrentStep(currentStep - 1);
+            setCurrentQuestion(questions[currentStep - 2]);
+
         }
-    };
+    }
 
     const progressPercentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
 
@@ -26,7 +37,7 @@ export function Main() {
     return (
         <div className={styles.contentMain}>
         <div className={styles.contentQuestionMain}>
-            <Question title={`Question ${currentStep}`} question="What is your estimate skill level?" />
+            <Question title={`Question ${currentStep}`} question={currentQuestion} />
         </div>
       
      
