@@ -1,0 +1,23 @@
+.productInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.navigationImages {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigationImages img:hover {
+  box-shadow: 0 4px 8px rgba(211, 210, 210, 0.3); 
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+

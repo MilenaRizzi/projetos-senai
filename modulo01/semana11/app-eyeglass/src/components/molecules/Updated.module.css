@@ -1,0 +1,39 @@
+.updated {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 5rem;
+}
+
+.updated h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.infoUser {
+  display: flex;
+  margin: auto;
+}
+
+.updated input {
+  border: transparent;
+  border-bottom: 1px solid rgb(255, 0, 43);
+  padding: 0 0.5rem;
+  width: 50vh;
+  margin-left: 2rem;
+}
+
+.updated input:focus {
+  border: transparent;
+  border-bottom: 1px solid rgb(255, 0, 43);
+  outline: none;
+}
+
+.updated Button {
+  background: transparent;
+  border: 1px solid rgb(255, 0, 43);
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  font-family: 'Cutive Mono', monospace;
+  color: rgb(255, 0, 43);
+}

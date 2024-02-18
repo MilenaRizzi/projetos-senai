@@ -1,0 +1,62 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+  padding: 0 6rem;
+  align-items: center;
+}
+
+.menuProduct {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 3rem;
+  margin: auto;
+  font-size: 0.85rem;
+
+
+}
+.product {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.product > p {
+  margin-top: 0.5rem;
+}
+
+.productComponent {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.nameAndDescription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.button {
+  text-align: center;
+  margin: 1rem;
+  padding-top: 2rem;
+}
+
+.button Button {
+  width: 8%;
+  border: 1px solid rgb(230, 22, 56);
+  border-radius: 20px;
+  background: transparent; 
+  padding: 0.4rem;
+  color: rgb(230, 22, 56);
+  font-size: 0.65rem;
+  line-height: 1rem;
+  font-family: 'Cutive Mono', monospace;
+}

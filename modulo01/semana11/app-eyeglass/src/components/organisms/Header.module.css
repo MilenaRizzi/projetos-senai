@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.logo {
+  border: 1px solid #000; /* Adicione a cor da borda desejada */
+  padding: 1rem; /* Ajuste conforme necessário */
+  background-color: black;
+  color: white;
+  
+}
+
+.logo p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.itemMenu a{
+  text-decoration: none;
+  color: black;
+}
+
+.itemMenu a:hover {
+  border-top: transparent;
+  border-bottom: 1px solid rgb(243, 12, 50);
+  color: rgb(243, 12, 50);
+}
+
+.userAndBag {
+  display: flex;
+  gap: 0.5rem;
+
+}
