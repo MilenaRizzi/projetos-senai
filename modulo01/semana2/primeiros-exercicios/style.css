@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+
+
+body {
+    background: #baacc26b;
+    text-align: center;
+}
+
+main {
+    min-width: 400px;
+    max-width: 1025px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 20px;
+    color:  #33072C;
+}
+
+p {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.container-botao {
+    display: flex;
+    justify-content: center;
+    gap: 67px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 5px;
+    border-radius: 2px;
+    margin: 10px 0px 10px 20px;
+    width: 100px;
+    background-color: #c6acc25e;
+    
+}
+
+.container-botao a {
+    font-size: 14px;
+    text-decoration: none;
+    color:#33072C;
+}
+
+.container-botao a:hover {
+    color:#946C8E;
+    text-decoration: underline;
+}
+
+

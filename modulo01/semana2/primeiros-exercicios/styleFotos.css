@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body {
+    background: #baacc26b;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+.container-img{
+    display: flex;
+    justify-content: center   ;
+    gap: 50px;
+}
+
+button {
+    padding: 5px;
+    width: 5%;
+    background-color: #c6acc250;
+    border-radius: 2px;
+}
+
+.container-botao {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #33072C;
+}
+
+button a:hover {
+    color:#946C8E;
+    text-decoration: underline;
+}
