@@ -11,8 +11,21 @@ public class Empregado {
   }
 
   public float promover(float percentual) {
-      float novoSalario = (float) (this.salario + (percentual * this.salario));
-      return novoSalario;
+      return (float) (this.salario += (percentual * this.salario));     
   }
+
+  public String getCpf() {
+    return this.cpf;
+  }
+
+
+  public String getNome() {
+    return this.nome;
+  }
+
+  public double getSalario() {
+    return this.salario;
+  }
+
 
 }
