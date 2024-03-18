@@ -1,116 +1,115 @@
 .content {
-    margin: auto;
-    min-width: 300px;
-    max-width: 736px;
+  margin: auto;
+  min-width: 300px;
+  max-width: 736px;
 }
 
 .form {
-    background: #FAFAFC;
-    border-radius: 8px 8px 0px 0px;
-    padding: 40px 50px 20px 50px;
-    margin-bottom: 20px;
-
+  background: #fafafc;
+  border-radius: 8px 8px 0px 0px;
+  padding: 40px 50px 20px 50px;
+  margin-bottom: 20px;
 }
 
 .inputWrapper {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.60rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
 }
 
 .inputWrapper label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem;
-    line-height: 24px;
-    color: #4E4958;
-    margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  line-height: 24px;
+  color: #4e4958;
+  margin-bottom: 10px;
 }
 
-.inputWrapper input, select {
-    border-radius: 8px;
-    border: 1px solid var(--Back-Lines-in-white, #E6E6F0);
-    background: #e8e8eb91;
-    height: 56px;
-    padding: 0 24px;
-    /*para que o texto escrito dentro de input tivesse um padding e não começasse grudado na bordar quando a pessoa fosse digitar*/
-    line-height: 1.5rem;
+.inputWrapper input,
+select {
+  border-radius: 8px;
+  border: 1px solid var(--Back-Lines-in-white, #e6e6f0);
+  background: #e8e8eb91;
+  height: 56px;
+  padding: 0 24px;
+  /*para que o texto escrito dentro de input tivesse um padding e não começasse grudado na bordar quando a pessoa fosse digitar*/
+  line-height: 1.5rem;
 }
 
 .inputWrapper label span {
-    margin-left: 6px;
-    font-size: 0.65rem;
-    line-height: 20px;
-    color: #9f99ad;
+  margin-left: 6px;
+  font-size: 0.65rem;
+  line-height: 20px;
+  color: #9f99ad;
 }
 
 .name {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .enviar {
-    text-align: center;
+  text-align: center;
 }
 
 .btnEnviar {
-    padding: 0.5rem;
-    background-color: #2e78e6e7;
-    border: 0;
-    border-radius: 4px;
-    color: rgb(245, 238, 238);
-    font-size: 0.8rem;
-    width: 4rem;
+  padding: 0.5rem;
+  background-color: #2e78e6e7;
+  border: 0;
+  border-radius: 4px;
+  color: rgb(245, 238, 238);
+  font-size: 0.8rem;
+  width: 4rem;
 }
 
-.btnEnviar:hover { 
-    background: #2E3EE6;
-}    
+.btnEnviar:hover {
+  background: #2e3ee6;
+}
 
 .result {
-    margin-top: 35px;
-    background: #FAFAFC;
-    border-radius: 8px 8px 0px 0px;
-    min-height: 150px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
+  margin-top: 35px;
+  background: #fafafc;
+  border-radius: 8px 8px 0px 0px;
+  min-height: 150px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .result > h2 {
-    padding-bottom: 2rem;
-    text-align: center;
-    color: #1198f8;
-    font-family: 'Archivo', sans-serif;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: #1198f8;
+  font-family: "Archivo", sans-serif;
 }
 
 .userInfos {
-    margin: 0 1rem;
-    line-height: 26px;
+  margin: 0 1rem;
+  line-height: 26px;
 }
 
 .userInfos > div {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .userInfos button {
-    border: 0;
+  border: 0;
 }
 
 .userInfos p {
-    font-family: 'Archivo', sans-serif;
-    color: rgba(0, 66, 114, 0.637);
-    font-size: 0.9rem;
+  font-family: "Archivo", sans-serif;
+  color: rgba(0, 66, 114, 0.637);
+  font-size: 0.9rem;
 }
 
 .userInfos p span {
-    font-weight: normal;
-    font-family: sans-serif;
-    color: black;
-    font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-family: sans-serif;
+  color: black;
+  font-family: "Roboto", sans-serif;
 }
 
 .userInfos hr {
-    margin: 20px 0;
-
+  margin: 20px 0;
 }

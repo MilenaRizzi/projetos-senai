@@ -1,12 +1,11 @@
-
 type HeaderProps = {
-    title: string;
+  title: string;
 };
 
-export function Header({title}: HeaderProps) {
-    return (
-        <div>
-            <h1>{title}</h1>
-        </div>
-    );
+export function Header({ title }: HeaderProps) {
+  return (
+    <div>
+      <h1>{title}</h1>
+    </div>
+  );
 }

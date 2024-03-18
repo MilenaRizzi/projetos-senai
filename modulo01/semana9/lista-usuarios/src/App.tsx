@@ -1,13 +1,12 @@
-import { UserList } from "./components/UserList"
-import styles from './App.module.css'
+import { UserList } from "./components/UserList";
+import styles from "./App.module.css";
 
 function App() {
-
   return (
     <div className={styles.wrapper}>
-     <UserList/>  
+      <UserList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

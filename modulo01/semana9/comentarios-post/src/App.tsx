@@ -1,13 +1,9 @@
-import { Post } from './components/Post';
-
+import { Post } from "./components/Post";
 function App() {
-
   return (
-    <div >
+    <div>
       <Post />
     </div>
-
-  )
+  );
 }
-
-export default App
+export default App;

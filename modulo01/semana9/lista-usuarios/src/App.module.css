@@ -1,21 +1,21 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-    background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 body::before {
-    content:''; /*o conteudo do que eu quero colocar antes do body, se eu escrevesse abc, apareceria acima do body*/
-    width: 100vw;
-    height: 250px;
-    background: #121214;
+  content: ""; /*o conteudo do que eu quero colocar antes do body, se eu escrevesse abc, apareceria acima do body*/
+  width: 100vw;
+  height: 250px;
+  background: #121214;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: #121214c9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #121214c9;
 }

@@ -1,9 +1,8 @@
 body {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .contador {
-    background: rgba(128, 128, 128, 0.219);
-    border: solid 1px;
+  background: rgba(128, 128, 128, 0.219);
+  border: solid 1px;
 }
-
