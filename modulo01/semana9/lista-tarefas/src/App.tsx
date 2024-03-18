@@ -5,7 +5,7 @@ import { TaskList } from "./components/TaskList";
 function App() {
   return (
     <div>
-      <Header title="Lista de Tarefas" />
+      <Header />
       <TaskList />
     </div>
   );
