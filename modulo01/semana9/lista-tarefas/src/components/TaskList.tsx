@@ -13,7 +13,7 @@ export function TaskList() {
 
   function addItemToList(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (inputValue.trim() !== "") {
+    if (inputValue.length > 0) {
       const newItem: ToDoItem = {
         id: Date.now(),
         value: inputValue,
