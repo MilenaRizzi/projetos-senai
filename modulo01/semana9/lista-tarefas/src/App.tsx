@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Header title="Lista de Tarefas" />
-      {TaskList()}
+      <TaskList />
     </div>
   );
 }
