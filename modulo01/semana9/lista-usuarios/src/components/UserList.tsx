@@ -1,6 +1,11 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Header } from "./Header";
 import styles from "./UserList.module.css";
+interface User {
+  name: string;
+  age: string;
+  exp: string;
+}
 
 export function UserList() {
   const [form, setForm] = useState({
@@ -8,9 +13,8 @@ export function UserList() {
     age: "",
     exp: "",
   });
-  const [users, setUsers] = useState<
-    { name: string; age: string; exp: string }[]
-  >([]);
+  
+  const [users, setUsers] = useState<User[]>([]);
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
