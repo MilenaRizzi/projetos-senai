@@ -36,7 +36,7 @@ export function UserList() {
       exp: formInfo.exp,
     };
 
-    setUsers((prevUsers) => [...prevUsers, newUser]);
+    setUsers((userInfo) => [...userInfo, newUser]);
 
     setForInfo({
       name: "",
@@ -46,7 +46,7 @@ export function UserList() {
   }
 
   function handleDeleteRegister(id: string) {
-    setUsers((prevUsers) => prevUsers.filter((user) => user.id !== id));
+    setUsers((users) => users.filter((user) => user.id !== id));
   }
 
   const isFormEmpty = !formInfo.name || !formInfo.age || !formInfo.exp;
@@ -77,8 +77,8 @@ export function UserList() {
               Idade<span>(ex: 18 anos)</span>
             </label>
             <input
-              type="text"
               name="age"
+              type="text"
               onChange={handleInputChange}
               value={formInfo.age}
             />
@@ -90,8 +90,8 @@ export function UserList() {
               <span>(iniciante, intermediário, avançado)</span>
             </label>
             <input
-              type="text"
               name="exp"
+              type="text"
               onChange={handleInputChange}
               value={formInfo.exp}
             />
