@@ -1,20 +1,20 @@
 import { useState } from "react";
 import "./taskList.css";
 
-interface TodoItem {
+interface ToDoItem {
   id: number;
   value: string;
   completed: boolean;
 }
 
 export function TaskList() {
-  const [list, setList] = useState<TodoItem[]>([]);
+  const [list, setList] = useState<ToDoItem[]>([]);
   const [inputValue, setInputValue] = useState("");
 
   const addItemToList = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (inputValue.trim() !== "") {
-      const newItem: TodoItem = {
+      const newItem: ToDoItem = {
         id: Date.now(),
         value: inputValue,
         completed: false,
