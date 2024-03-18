@@ -13,10 +13,12 @@ export function UserList() {
     age: "",
     exp: "",
   });
+
   const [users, setUsers] = useState<User[]>([]);
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
+    
     setForInfo((prevForm) => ({
       ...prevForm,
       [name]: value,
@@ -25,6 +27,7 @@ export function UserList() {
 
   function handleAddNewUser(event: FormEvent) {
     event.preventDefault();
+
     setUsers((prevUsers) => [...prevUsers, formInfo]);
 
     setForInfo({
