@@ -34,6 +34,11 @@ export function TaskList() {
     setList(updatedList);
   }
 
+  
+  function handleDeleteTask(index: number) {
+    setList((prevTask) => prevTask.filter((_, i) => i !== index));
+  }
+
   return (
     <div className="lista-tarefas">
       <span className="texto-span">Adicione um item à sua lista</span>
@@ -49,15 +54,18 @@ export function TaskList() {
       </form>
       <div>
         <ul className="itens">
-          {list.map((item) => (
+          {list.map((item, index) => (
             <li className="item-lista" key={item.id}>
-              <input
-                className="checkbox"
-                type="checkbox"
-                checked={item.completed}
-                onChange={() => toggleItemCompletion(item.id)}
-              />
-              <span>{item.value}</span>
+              <div>
+                <input
+                  className="checkbox"
+                  type="checkbox"
+                  checked={item.completed}
+                  onChange={() => toggleItemCompletion(item.id)}
+                />
+                <span>{item.value}</span>
+              </div>
+              <button onClick={() => handleDeleteTask(index)}>🗑️</button>
             </li>
           ))}
         </ul>
