@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { Header } from "./Header";
 import styles from "./UserList.module.css";
 interface User {
+  id: string;
   name: string;
   age: string;
   exp: string;
@@ -28,7 +29,14 @@ export function UserList() {
   function handleAddNewUser(event: FormEvent) {
     event.preventDefault();
 
-    setUsers((prevUsers) => [...prevUsers, formInfo]);
+    const newUser: User = {
+      id: Date.now().toString(),
+      name: formInfo.name,
+      age: formInfo.age,
+      exp: formInfo.exp,
+    };
+
+    setUsers((prevUsers) => [...prevUsers, newUser]);
 
     setForInfo({
       name: "",
@@ -37,8 +45,8 @@ export function UserList() {
     });
   }
 
-  function handleDeleteRegister(index: number) {
-    setUsers((prevUsers) => prevUsers.filter((_, i) => i !== index));
+  function handleDeleteRegister(id: string) {
+    setUsers((prevUsers) => prevUsers.filter((user) => user.id !== id));
   }
 
   const isFormEmpty = !formInfo.name || !formInfo.age || !formInfo.exp;
@@ -99,13 +107,13 @@ export function UserList() {
       {users.length >= 1 && (
         <div className={styles.result}>
           <h2>Lista de Alunos Cadastrados</h2>
-          {users.map((user, index) => (
-            <div className={styles.userInfos} key={user.name}>
+          {users.map((user) => (
+            <div className={styles.userInfos} key={user.id}>
               <div>
                 <p>
                   nome: <span>{user.name}</span>
                 </p>
-                <button onClick={() => handleDeleteRegister(index)}>🗑️</button>
+                <button onClick={() => handleDeleteRegister(user.id)}>🗑️</button>
               </div>
               <p>
                 idade:<span> {user.age} anos</span>{" "}
