@@ -11,7 +11,7 @@ export function TaskList() {
   const [list, setList] = useState<ToDoItem[]>([]);
   const [inputValue, setInputValue] = useState("");
 
-  const addItemToList = (e: React.FormEvent<HTMLFormElement>) => {
+  function addItemToList(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (inputValue.trim() !== "") {
       const newItem: ToDoItem = {
@@ -22,14 +22,14 @@ export function TaskList() {
       setList([...list, newItem]);
       setInputValue("");
     }
-  };
+  }
 
-  const toggleItemCompletion = (itemId: number) => {
+  function toggleItemCompletion(itemId: number) {
     const updatedList = list.map((item) =>
       item.id === itemId ? { ...item, completed: !item.completed } : item
     );
     setList(updatedList);
-  };
+  }
 
   return (
     <div className="lista-tarefas">
