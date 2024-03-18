@@ -13,12 +13,14 @@ export function TaskList() {
 
   function addItemToList(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
     if (inputValue.length > 0) {
       const newItem: ToDoItem = {
         id: Date.now(),
         value: inputValue,
         completed: false,
       };
+
       setList([...list, newItem]);
       setInputValue("");
     }
@@ -28,6 +30,7 @@ export function TaskList() {
     const updatedList = list.map((item) =>
       item.id === itemId ? { ...item, completed: !item.completed } : item
     );
+
     setList(updatedList);
   }
 
@@ -54,9 +57,7 @@ export function TaskList() {
                 checked={item.completed}
                 onChange={() => toggleItemCompletion(item.id)}
               />
-              <span className={item.completed ? "completed" : ""}>
-                {item.value}
-              </span>
+              <span>{item.value}</span>
             </li>
           ))}
         </ul>
