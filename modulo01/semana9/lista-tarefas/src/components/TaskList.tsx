@@ -49,7 +49,7 @@ export function TaskList() {
           onChange={(e) => setInputValue(e.target.value)}
         />
         <button className="btn-adicionar" type="submit">
-          Adicionar à Lista
+          Adicionar 
         </button>
       </form>
       <div>
