@@ -15,13 +15,13 @@ export function TaskList() {
     e.preventDefault();
 
     if (inputValue.length > 0) {
-      const newItem: ToDoItem = {
+      const newTask: ToDoItem = {
         id: Date.now().toString(),
         value: inputValue,
         completed: false,
       };
+      setList((tasks) => [...tasks, newTask]);
 
-      setList([...list, newItem]);
       setInputValue("");
     }
   }
