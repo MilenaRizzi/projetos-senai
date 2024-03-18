@@ -8,7 +8,7 @@ interface User {
 }
 
 export function UserList() {
-  const [form, setForm] = useState({
+  const [formInfo, setForInfo] = useState({
     name: "",
     age: "",
     exp: "",
@@ -17,7 +17,7 @@ export function UserList() {
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
-    setForm((prevForm) => ({
+    setForInfo((prevForm) => ({
       ...prevForm,
       [name]: value,
     }));
@@ -25,14 +25,9 @@ export function UserList() {
 
   function handleAddNewUser(event: FormEvent) {
     event.preventDefault();
-    setUsers((prevUsers) => [...prevUsers, form]);
+    setUsers((prevUsers) => [...prevUsers, formInfo]);
 
-    if (!form.name || !form.age || !form.exp) {
-      alert("Por favor, preencha todos os campos");
-      return;
-    }
-    
-    setForm({
+    setForInfo({
       name: "",
       age: "",
       exp: "",
@@ -42,6 +37,8 @@ export function UserList() {
   function handleDeleteRegister(index: number) {
     setUsers((prevUsers) => prevUsers.filter((_, i) => i !== index));
   }
+
+  const isFormEmpty = !formInfo.name || !formInfo.age || !formInfo.exp;
 
   return (
     <div className={styles.content}>
@@ -59,7 +56,7 @@ export function UserList() {
                 name="name"
                 type="text"
                 onChange={handleInputChange}
-                value={form.name}
+                value={formInfo.name}
               />
             </div>
           </div>
@@ -72,7 +69,7 @@ export function UserList() {
               type="text"
               name="age"
               onChange={handleInputChange}
-              value={form.age}
+              value={formInfo.age}
             />
           </div>
 
@@ -85,12 +82,12 @@ export function UserList() {
               type="text"
               name="exp"
               onChange={handleInputChange}
-              value={form.exp}
+              value={formInfo.exp}
             />
           </div>
 
           <div className={styles.enviar}>
-            <button className={styles.btnEnviar} disabled={!form}>
+            <button className={styles.btnEnviar} disabled={isFormEmpty}>
               Enviar
             </button>
           </div>
