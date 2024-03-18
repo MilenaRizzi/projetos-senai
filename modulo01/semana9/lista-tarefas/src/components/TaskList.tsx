@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./taskList.css";
 
 interface ToDoItem {
-  id: number;
+  id: string;
   value: string;
   completed: boolean;
 }
@@ -16,7 +16,7 @@ export function TaskList() {
 
     if (inputValue.length > 0) {
       const newItem: ToDoItem = {
-        id: Date.now(),
+        id: Date.now().toString(),
         value: inputValue,
         completed: false,
       };
@@ -26,7 +26,7 @@ export function TaskList() {
     }
   }
 
-  function toggleItemCompletion(itemId: number) {
+  function toggleItemCompletion(itemId: string) {
     const updatedList = list.map((item) =>
       item.id === itemId ? { ...item, completed: !item.completed } : item
     );
@@ -35,8 +35,8 @@ export function TaskList() {
   }
 
   
-  function handleDeleteTask(index: number) {
-    setList((prevTask) => prevTask.filter((_, i) => i !== index));
+  function handleDeleteTask(id: string) {
+    setList((prevTask) => prevTask.filter((task) => task.id !== id));
   }
 
   return (
@@ -54,7 +54,7 @@ export function TaskList() {
       </form>
       <div>
         <ul className="itens">
-          {list.map((item, index) => (
+          {list.map((item) => (
             <li className="item-lista" key={item.id}>
               <div>
                 <input
@@ -65,7 +65,7 @@ export function TaskList() {
                 />
                 <span>{item.value}</span>
               </div>
-              <button onClick={() => handleDeleteTask(index)}>🗑️</button>
+              <button onClick={() => handleDeleteTask(item.id)}>🗑️</button>
             </li>
           ))}
         </ul>
