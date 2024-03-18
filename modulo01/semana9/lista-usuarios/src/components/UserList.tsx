@@ -13,7 +13,6 @@ export function UserList() {
     age: "",
     exp: "",
   });
-  
   const [users, setUsers] = useState<User[]>([]);
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
@@ -28,6 +27,11 @@ export function UserList() {
     event.preventDefault();
     setUsers((prevUsers) => [...prevUsers, form]);
 
+    if (!form.name || !form.age || !form.exp) {
+      alert("Por favor, preencha todos os campos");
+      return;
+    }
+    
     setForm({
       name: "",
       age: "",
