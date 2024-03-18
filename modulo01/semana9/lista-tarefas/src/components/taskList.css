@@ -19,26 +19,45 @@
 }
 
 .checkbox {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .btn-adicionar {
   margin-top: 20px;
+  border: transparent;
 }
+
+.btn-adicionar:hover{
+  border: transparent;
+  background-color: black;
+} 
 
 .itens {
   margin-top: 20px;
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 10px;
   padding: 0;
 }
 
 .item-lista {
   display: flex;
-  align-items: flex-end;
-  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 20vw;
+}
+
+.item-lista > div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-lista  > button {
+  background: transparent;
+  border: none;
+  padding: 1px;
 }
