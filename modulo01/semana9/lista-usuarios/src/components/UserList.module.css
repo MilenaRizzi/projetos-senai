@@ -60,10 +60,16 @@ select {
   color: rgb(245, 238, 238);
   font-size: 0.8rem;
   width: 4rem;
+  cursor: pointer;
 }
 
 .btnEnviar:hover {
   background: #2e3ee6;
+}
+
+.btnEnviar:disabled {
+  background: #2e3de688;
+  cursor: not-allowed;
 }
 
 .result {
