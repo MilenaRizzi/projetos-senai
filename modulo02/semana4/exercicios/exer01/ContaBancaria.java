@@ -32,7 +32,7 @@ public class ContaBancaria {
     } else if (this.saldo >= valor && valor < 2) {
       System.out.println("Saque inválido. Saque disponível a partir de R$2,00!");
     } else {
-      System.out.println("Saque inválido. Saldo indisponível disponível a partir de R$2,00!");
+      System.out.println("Saque inválido. Saldo indisponível!");
     }
 
   }
