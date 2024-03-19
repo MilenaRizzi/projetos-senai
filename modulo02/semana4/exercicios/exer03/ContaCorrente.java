@@ -40,13 +40,12 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
   }
 
   @Override
-  public String mostrarDados() {
-    return "Tipo de conta: Conta Corrente \n" + 
-    "Número da conta: " + getNumeroDaConta() + 
-    "\nAgência: " + getAgencia() + 
-    "\nNome do titular: " + getNomeDoTitular() + 
-    "\nSaldo: " +  getSaldo();
+  public void mostrarDados() {
+    System.out.println("Tipo de conta: Conta Corrente");
+    System.out.println("Número da conta: " + getNumeroDaConta());
+    System.out.println("Agência: " + getAgencia());
+    System.out.println("Nome do titular: " + getNomeDoTitular());
+    System.out.println("Saldo: " + getSaldo());
   }
-
 
 }
