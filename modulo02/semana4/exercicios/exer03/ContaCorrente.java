@@ -1,8 +1,9 @@
 package exer03;
 
 import exer01.ContaBancaria;
+import exer04.Imprimivel;
 
-public class ContaCorrente extends ContaBancaria {
+public class ContaCorrente extends ContaBancaria implements Imprimivel {
   private double taxaDeOperacao;
 
   public ContaCorrente() {
@@ -37,5 +38,15 @@ public class ContaCorrente extends ContaBancaria {
   public void setTaxaDeOperacao(double taxaDeOperacao) {
     this.taxaDeOperacao = taxaDeOperacao;
   }
+
+  @Override
+  public String mostrarDados() {
+    return "Tipo de conta: Conta Corrente \n" + 
+    "Número da conta: " + getNumeroDaConta() + 
+    "\nAgência: " + getAgencia() + 
+    "\nNome do titular: " + getNomeDoTitular() + 
+    "\nSaldo: " +  getSaldo();
+  }
+
 
 }
