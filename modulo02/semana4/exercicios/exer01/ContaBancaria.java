@@ -1,5 +1,4 @@
 package exer01;
-
 public class ContaBancaria {
   private int numeroDaConta;
   private int agencia;
