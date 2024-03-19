@@ -3,7 +3,7 @@ package exer02;
 import exer01.ContaBancaria;
 import exer04.Imprimivel;
 
-public class ContaPoupanca extends ContaBancaria implements Imprimivel{
+public class ContaPoupanca extends ContaBancaria implements Imprimivel {
   private double taxaDeJuros;
 
   public ContaPoupanca() {
@@ -32,20 +32,11 @@ public class ContaPoupanca extends ContaBancaria implements Imprimivel{
     this.taxaDeJuros = taxaDeJuros;
   }
 
-
   @Override
-  public String toString() {
-    return "{" +
-      " taxaDeJuros='" + getTaxaDeJuros() + "'" +
-      "}";
-  }
-
-  @Override
-  public String mostrarDados() {
-    return "Tipo de conta: Conta Poupança \n" + 
-    "Número da conta: " + getNumeroDaConta() + 
-    "\nAgência: " + getAgencia() + 
-    "\nNome do titular: " + getNomeDoTitular() + 
-    "\nSaldo: " +  getSaldo();
+  public void mostrarDados() {
+    System.out.println("Tipo de conta: Conta Poupança");
+    System.out.println("Agência: " + getAgencia());
+    System.out.println("Nome do titular: " + getNomeDoTitular());
+    System.out.println("Saldo: " + getSaldo());
   }
 }
