@@ -1,4 +1,4 @@
-package model;
+package br.senai.sc.todolist.model;
 import java.time.LocalDateTime;
 
 public class Tarefa {

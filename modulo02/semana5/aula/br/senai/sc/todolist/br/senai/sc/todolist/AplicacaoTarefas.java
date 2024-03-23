@@ -1,4 +1,5 @@
-import view.TarefaCLI;
+package br.senai.sc.todolist;
+import br.senai.sc.todolist.view.TarefaCLI;
 
 public class AplicacaoTarefas {
   

@@ -1,0 +1,8 @@
+package todolist;
+
+publica class Principal {
+  public static void main(String[] args) {
+    TarefaCLI cli = new TarefaCLI();
+    cli.exibirMenu();
+  }
+}

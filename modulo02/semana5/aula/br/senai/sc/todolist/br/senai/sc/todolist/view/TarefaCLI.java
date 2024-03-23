@@ -1,4 +1,4 @@
-package view;
+package br.senai.sc.todolist.view;
 
 import java.util.Scanner;
 
