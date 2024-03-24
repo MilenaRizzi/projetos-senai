@@ -18,28 +18,25 @@ public class HeroiCLI {
   }
 
   public Operacao obterOperacao() {
+    @SuppressWarnings("resource")
     Scanner scanner = new Scanner(System.in);
     System.out.println();
     System.out.print("Escolha uma opção: ");
 
-    int codigoOperacao = scanner.nextInt();
-    System.out.println();
-    Operacao[] operacoes = Operacao.values();
     Operacao operacao = null;
-    if ((codigoOperacao - 1) >= 0 && (codigoOperacao - 1) < operacoes.length) {
+    try {
+      int codigoOperacao = scanner.nextInt();
+      System.out.println();
+      Operacao[] operacoes = Operacao.values();
       operacao = operacoes[codigoOperacao - 1];
-    } else {
-      exibirMensagem("Código de Operação Inválido!!!", TipoMensagem.ERRO);
+    } catch (ArrayIndexOutOfBoundsException e) {
+      exibirMensagem("Código de operação inválido!!!", TipoMensagem.ERRO);
+      System.out.println();
       aguardar();
+    } catch (Exception e) {
+      exibirMensagem("Erro no sistema", TipoMensagem.ERRO);
+      System.out.println("Erro: " + e.getMessage());
     }
-
-    // if (codigoOperacao == 1) {
-    // operacao = Operacao.ADICIONAR;
-    // } else if (codigoOperacao == 2) {
-    // operacao = Operacao.LISTAR;
-    // } else {
-    // operacao = Operacao.SAIR;
-    // }
 
     return operacao;
   }
@@ -65,6 +62,7 @@ public class HeroiCLI {
   }
 
   public Heroi obterDadosHeroi() {
+    @SuppressWarnings("resource")
     Scanner scanner = new Scanner(System.in);
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite o nome do Héroi: " + ConsoleColors.RESET);
     String nome = scanner.nextLine();
@@ -92,6 +90,7 @@ public class HeroiCLI {
     System.out.println(ConsoleColors.BLUE_BACKGROUND +
         "Pressione qualquer tecla para continuar..."
         + ConsoleColors.RESET);
+    @SuppressWarnings("resource")
     Scanner scanner = new Scanner(System.in);
     scanner.nextLine();
     System.out.println();
