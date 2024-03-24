@@ -2,7 +2,6 @@ package br.senai.sc.heroi;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import br.senai.sc.heroi.model.Heroi;
 import br.senai.sc.heroi.model.Operacao;
 import br.senai.sc.heroi.model.TipoMensagem;
@@ -25,13 +24,15 @@ public class DevHeroiAplicacao {
     cli.exibirMensagem("Sistema Encerrado", TipoMensagem.AVISO);
   }
 
-  public void processar(Operacao operacao) {
+  private void processar(Operacao operacao) {
     if (operacao == Operacao.SAIR)
       return;
+
     List<Heroi> lista = new ArrayList<>();
     if (operacao == Operacao.ADICIONAR) {
       Heroi heroi = cli.obterDadosHeroi();
       lista = repo.consultar();
+
       if (lista.size() != 0) {
         for (Heroi her : lista) {
           if (her.getNome().equalsIgnoreCase(heroi.getNome())) {
@@ -41,14 +42,18 @@ public class DevHeroiAplicacao {
           }
         }
       }
+
       repo.adicionar(heroi);
       cli.exibirMensagem("Herói adicionado com sucesso!", TipoMensagem.SUCESSO);
       cli.aguardar();
+
     } else if (operacao == Operacao.LISTAR) {
       lista = repo.consultar();
+
       if (lista.size() > 0) {
         cli.exibirListagem(lista);
         cli.aguardar();
+        
       } else {
         cli.exibirMensagem("Lista vazia. Não há heróis cadastrados!", TipoMensagem.ERRO);
         cli.aguardar();
