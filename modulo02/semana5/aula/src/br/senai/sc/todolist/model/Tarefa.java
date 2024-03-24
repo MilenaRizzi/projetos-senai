@@ -1,6 +1,7 @@
 package br.senai.sc.todolist.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Tarefa {
    private Integer id;
@@ -64,10 +65,10 @@ public class Tarefa {
   @Override
   public String toString() {
     return "Tarefa " +
-      " id='" + getId() + "'" +
-      ", texto='" + getTexto() + "'" +
-      ", concluida='" + isConcluida() + "'" +
-      ", dataCriação='" + getDataCriação() + "'";
+      " id= " + id +
+      ", texto= " + texto +
+      ", concluida= " + (concluida ? "sim" : "não") +
+      ", dataCriação= " + dataCriação.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
   }
   
 }

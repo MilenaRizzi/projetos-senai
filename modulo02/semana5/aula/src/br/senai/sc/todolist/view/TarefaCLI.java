@@ -7,6 +7,7 @@ import br.senai.sc.todolist.model.Tarefa;
 import br.senai.sc.todolist.model.TipoMensagem;
 
 public class TarefaCLI {
+  
    public void exibirMenu() {
     System.out.println();
     System.out.println(ConsoleColors.BLUE_BOLD + "-------- MENU --------" + ConsoleColors.RESET);
@@ -83,6 +84,12 @@ public class TarefaCLI {
     System.out.println();
   }
 
+  public void exibir(Tarefa tarefa) {
+    System.out.println();
+    System.out.println(tarefa);
+    System.out.println();
+  }
+
   //o que o método faz é basicamente esperar que o usuário aperte o enter
   public void aguardar() {
     System.out.println(ConsoleColors.BLUE_BACKGROUND + "Pressione qualquer tecla para continuar..." + ConsoleColors.RESET);
@@ -93,8 +100,10 @@ public class TarefaCLI {
 
   public int obterIdTarefa() {
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Informe o texto id da tarefa a ser excluida: ");
+    System.out.print("Informe o id da tarefa: ");
     int id = scanner.nextInt();
     return id;
   }
+
+
 }

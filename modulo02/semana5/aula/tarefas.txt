@@ -1,0 +1,3 @@
+Tarefa  id= 1, texto= lavar roupa, concluida= não, dataCriação= 24/03/2024 15:47:01
+Tarefa  id= 2, texto= estudar java, concluida= não, dataCriação= 24/03/2024 15:47:07
+Tarefa  id= 3, texto= fazer jantar, concluida= não, dataCriação= 24/03/2024 15:47:12
