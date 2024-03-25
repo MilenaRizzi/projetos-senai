@@ -8,6 +8,13 @@ import br.senai.sc.heroi.model.Operacao;
 import br.senai.sc.heroi.model.TipoMensagem;
 
 public class HeroiCLI {
+
+  private Scanner scanner;
+
+  public HeroiCLI() {
+      this.scanner = new Scanner(System.in);
+  }
+
   public void exibirMenu() {
     System.out.println();
     System.out.println(ConsoleColors.BLUE_BOLD + "-------- MENU --------");
@@ -18,14 +25,13 @@ public class HeroiCLI {
   }
 
   public Operacao obterOperacao() {
-    @SuppressWarnings("resource")
-    Scanner scanner = new Scanner(System.in);
     System.out.println();
     System.out.print("Escolha uma opção: ");
 
     Operacao operacao = null;
     try {
       int codigoOperacao = scanner.nextInt();
+      scanner.nextLine();
       System.out.println();
       Operacao[] operacoes = Operacao.values();
       operacao = operacoes[codigoOperacao - 1];
@@ -35,7 +41,7 @@ public class HeroiCLI {
       aguardar();
     } catch (Exception e) {
       exibirMensagem("Erro no sistema", TipoMensagem.ERRO);
-      System.out.println("Erro: " + e.getMessage());
+      aguardar();
     }
 
     return operacao;
@@ -62,8 +68,6 @@ public class HeroiCLI {
   }
 
   public Heroi obterDadosHeroi() {
-    @SuppressWarnings("resource")
-    Scanner scanner = new Scanner(System.in);
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite o nome do Héroi: " + ConsoleColors.RESET);
     String nome = scanner.nextLine();
 
@@ -72,6 +76,7 @@ public class HeroiCLI {
 
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite a idade do Héroi: " + ConsoleColors.RESET);
     Integer idade = scanner.nextInt();
+    scanner.nextLine(); // Consumir a nova linha pendente
 
     Heroi heroi = new Heroi(nome, superPoder, idade);
     return heroi;
@@ -90,9 +95,13 @@ public class HeroiCLI {
     System.out.println(ConsoleColors.BLUE_BACKGROUND +
         "Pressione qualquer tecla para continuar..."
         + ConsoleColors.RESET);
-    @SuppressWarnings("resource")
-    Scanner scanner = new Scanner(System.in);
     scanner.nextLine();
     System.out.println();
   }
+
+  public void fecharScanner() {
+    if (scanner != null) {
+        scanner.close();
+    }
+}
 }
