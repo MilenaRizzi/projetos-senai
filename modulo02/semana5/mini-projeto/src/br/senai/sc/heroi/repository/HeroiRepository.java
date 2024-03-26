@@ -15,4 +15,13 @@ public class HeroiRepository {
   public List<Heroi> consultar() {
     return herois;
   }
+
+  public boolean existePorNome(String nome) {
+    for (Heroi heroi : herois) {
+      if (heroi.getNome().equalsIgnoreCase(nome)) {
+        return true;
+      }
+    }
+    return false;
+  }
 }

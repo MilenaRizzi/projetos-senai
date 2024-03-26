@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Scanner;
 
 import br.senai.sc.heroi.model.Heroi;
-import br.senai.sc.heroi.model.Operacao;
 import br.senai.sc.heroi.model.TipoMensagem;
 
 public class HeroiCLI {
@@ -12,7 +11,7 @@ public class HeroiCLI {
   private Scanner scanner;
 
   public HeroiCLI() {
-      this.scanner = new Scanner(System.in);
+    this.scanner = new Scanner(System.in);
   }
 
   public void exibirMenu() {
@@ -24,27 +23,12 @@ public class HeroiCLI {
     System.out.println();
   }
 
-  public Operacao obterOperacao() {
+  public String obterCodigoOperacao() {
     System.out.println();
     System.out.print("Escolha uma opção: ");
-
-    Operacao operacao = null;
-    try {
-      int codigoOperacao = scanner.nextInt();
-      scanner.nextLine();
-      System.out.println();
-      Operacao[] operacoes = Operacao.values();
-      operacao = operacoes[codigoOperacao - 1];
-    } catch (ArrayIndexOutOfBoundsException e) {
-      exibirMensagem("Código de operação inválido!!!", TipoMensagem.ERRO);
-      System.out.println();
-      aguardar();
-    } catch (Exception e) {
-      exibirMensagem("Erro no sistema", TipoMensagem.ERRO);
-      aguardar();
-    }
-
-    return operacao;
+    String opcao = scanner.next(); // string
+    System.out.println();
+    return opcao;
   }
 
   public void exibirMensagem(String mensagem, TipoMensagem tipo) {
@@ -70,13 +54,14 @@ public class HeroiCLI {
   public Heroi obterDadosHeroi() {
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite o nome do Héroi: " + ConsoleColors.RESET);
     String nome = scanner.nextLine();
+    scanner.nextLine();
 
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite o super-poder do Héroi: " + ConsoleColors.RESET);
     String superPoder = scanner.nextLine();
 
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite a idade do Héroi: " + ConsoleColors.RESET);
     Integer idade = scanner.nextInt();
-    scanner.nextLine(); // Consumir a nova linha pendente
+    scanner.nextLine();
 
     Heroi heroi = new Heroi(nome, superPoder, idade);
     return heroi;
@@ -95,13 +80,14 @@ public class HeroiCLI {
     System.out.println(ConsoleColors.BLUE_BACKGROUND +
         "Pressione qualquer tecla para continuar..."
         + ConsoleColors.RESET);
+    scanner = new Scanner(System.in);
     scanner.nextLine();
     System.out.println();
   }
 
   public void fecharScanner() {
     if (scanner != null) {
-        scanner.close();
+      scanner.close();
     }
-}
+  }
 }
