@@ -37,6 +37,25 @@ public class DevHeroiAplicacao {
     }
   }
 
+  private void processar(Operacao operacao) {
+    if (operacao == Operacao.SAIR)
+      return;
+
+    try {
+      if (operacao == null) {
+        cli.exibirMensagem("Código de operação inválido", TipoMensagem.ERRO);
+        cli.aguardar();
+      } else if (operacao == Operacao.ADICIONAR) {
+        adicionar();
+      } else if (operacao == Operacao.LISTAR) {
+        listar();
+      }
+    } catch (InputMismatchException e) {
+      cli.exibirMensagem("A idade precisa ser um número", TipoMensagem.ERRO);
+      cli.aguardar();
+    }
+  }
+
   private void adicionar() {
     Heroi heroi = cli.obterDadosHeroi();
     if (repo.existePorNome(heroi.getNome())) {
@@ -59,25 +78,6 @@ public class DevHeroiAplicacao {
 
     } else {
       cli.exibirMensagem("Lista vazia. Não há heróis cadastrados!", TipoMensagem.ERRO);
-      cli.aguardar();
-    }
-  }
-
-  private void processar(Operacao operacao) {
-    if (operacao == Operacao.SAIR)
-      return;
-
-    try {
-      if (operacao == null) {
-        cli.exibirMensagem("Código de operação inválido", TipoMensagem.ERRO);
-        cli.aguardar();
-      } else if (operacao == Operacao.ADICIONAR) {
-        adicionar();
-      } else if (operacao == Operacao.LISTAR) {
-        listar();
-      }
-    } catch (InputMismatchException e) {
-      cli.exibirMensagem("A idade precisa ser um número", TipoMensagem.ERRO);
       cli.aguardar();
     }
   }
