@@ -53,22 +53,22 @@ public class HeroiCLI {
 
   public Heroi obterDadosHeroi() {
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite o nome do Héroi: " + ConsoleColors.RESET);
+    scanner.nextLine(); 
+
     String nome = scanner.nextLine();
-    scanner.nextLine();
 
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite o super-poder do Héroi: " + ConsoleColors.RESET);
     String superPoder = scanner.nextLine();
 
     System.out.print(ConsoleColors.PURPLE_BOLD + "Digite a idade do Héroi: " + ConsoleColors.RESET);
     Integer idade = scanner.nextInt();
-    scanner.nextLine();
+
 
     Heroi heroi = new Heroi(nome, superPoder, idade);
     return heroi;
   }
 
   public void exibirListagem(List<Heroi> lista) {
-    System.out.println();
     exibirMensagem("Listagem de Heróis: ", TipoMensagem.AVISO);
     for (Heroi heroi : lista) {
       System.out.println(heroi);
