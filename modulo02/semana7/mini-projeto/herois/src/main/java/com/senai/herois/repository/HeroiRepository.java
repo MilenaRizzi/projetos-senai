@@ -20,4 +20,7 @@ public class HeroiRepository {
     return herois;
   }
   
+  public boolean existeHeroiComNome(String nome) {
+    return herois.stream().anyMatch(heroi -> heroi.getNome().equals(nome));
+  }
 }
