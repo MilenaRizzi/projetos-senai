@@ -18,7 +18,7 @@ import com.senai.herois.model.Heroi;
 import com.senai.herois.service.HeroiService;
 
 @RestController
-@RequestMapping
+@RequestMapping("herois")
 public class HeroiController {
   
   @Autowired
