@@ -17,11 +17,13 @@ public class TarefaRepository {
 
   private int geradorDeId = 1;
 
+  //consultar tarefas
   public List<Tarefa> consultar() {
     return lista;
   }
   
   //Optinal.of adiciona uma tarefa dentro
+  //obter tarefa por id
   public Optional<Tarefa> obter(Integer id) {
     for(var tarefa : lista) {
       if (tarefa.getId().intValue() == id.intValue()) {
