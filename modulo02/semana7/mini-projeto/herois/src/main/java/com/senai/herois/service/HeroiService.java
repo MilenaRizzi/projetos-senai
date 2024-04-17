@@ -11,8 +11,14 @@ public class HeroiService {
   
   @Autowired
   private HeroiRepository heroiRepository;
-
+  
+  public Heroi inserir(Heroi heroi) {
+    heroi = heroiRepository.adicionar(heroi);
+    return heroi;
+  }
+  
   public List<Heroi> consultar() {
     return heroiRepository.consultar();
   }
+
 }
