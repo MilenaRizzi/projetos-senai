@@ -15,6 +15,9 @@ public class HeroiService {
   private HeroiRepository heroiRepository;
   
   public Heroi inserir(Heroi heroi) {
+    if (heroiRepository.existeHeroiComNome(heroi.getNome())) {
+      throw new IllegalArgumentException("Ja existe um heroi com o mesmo nome");
+  }
     heroi = heroiRepository.adicionar(heroi);
     return heroi;
   }
