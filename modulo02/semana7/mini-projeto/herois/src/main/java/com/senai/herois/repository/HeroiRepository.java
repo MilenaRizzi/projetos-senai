@@ -3,8 +3,11 @@ package com.senai.herois.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.senai.herois.model.Heroi;
 
+@Repository
 public class HeroiRepository {
   private List<Heroi> herois = new ArrayList<>();
   
