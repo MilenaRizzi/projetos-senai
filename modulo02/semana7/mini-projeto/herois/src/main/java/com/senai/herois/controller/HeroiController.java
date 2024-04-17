@@ -26,14 +26,17 @@ public class HeroiController {
 
 
   @PostMapping
-  public ResponseEntity<HeroiResponse> inserir (@RequestBody HeroiInclusaoRequest request) {
-    var heroi = new Heroi(request.getNome(), request.getSuperpoder(), request.getIdade(), request.getCidade());
-
-    heroi = heroiService.inserir(heroi);
-    var resp = new HeroiResponse(heroi);
-    return ResponseEntity.created(URI.create(heroi.getNome().toString())).body(resp);
+  public ResponseEntity<?> inserir (@RequestBody HeroiInclusaoRequest request) {
+    try {
+        var heroi = new Heroi(request.getNome(), request.getSuperpoder(), request.getIdade(), request.getCidade());
+        heroi = heroiService.inserir(heroi);
+        var resp = new HeroiResponse(heroi);
+        return ResponseEntity.created(URI.create(heroi.getNome().toString())).body(resp);
+    } catch (IllegalArgumentException e) {
+        return ResponseEntity.badRequest().body("Erro ao inserir o herói: " + e.getMessage());
+    }
   }
-
+  
   @GetMapping
   public ResponseEntity<List<HeroiResponse>> listar() {
     var herois = heroiService.consultar(); 
