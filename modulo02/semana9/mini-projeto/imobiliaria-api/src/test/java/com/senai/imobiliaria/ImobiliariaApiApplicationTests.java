@@ -1,4 +1,4 @@
-package com.senai.imobiliariaapi;
+package com.senai.imobiliaria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
