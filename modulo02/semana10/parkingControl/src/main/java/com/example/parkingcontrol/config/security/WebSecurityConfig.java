@@ -15,6 +15,7 @@ public class WebSecurityConfig {
     http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests((request) -> request
                 .requestMatchers(HttpMethod.POST, "/user/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/parking-spot/**")
                 .anyRequest()
                 .authenticated());
     return http.build();
