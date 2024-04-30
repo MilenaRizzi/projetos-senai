@@ -31,6 +31,9 @@ public class UserModel {
   @JoinTable(name = "TB_USER_ROLES", 
   joinColumns = @JoinColumn(name = "user_id"), 
   inverseJoinColumns = @JoinColumn(name = "role_id"))
+  /*Uma tabela TB_USER_ROLES foi criada, a coluna user_id dessa tabela é a chave estrangeira que referencia a tabela de usuários
+   * a coluna role_id dessa tabela é a chave estrangeira que refencia a tabela de funções.
+   */
   private List<RoleModel> roles;
 
 
