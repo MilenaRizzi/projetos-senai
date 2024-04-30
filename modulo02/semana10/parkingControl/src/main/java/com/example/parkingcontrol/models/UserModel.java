@@ -27,7 +27,7 @@ public class UserModel {
   @Column(nullable = false)
   private String password;
 
-  @ManyToMany
+  @ManyToMany //1 usuário pode ter muitas funções / 1 função pode ter muitos usuários -> por isso manytomany
   @JoinTable(name = "TB_USER_ROLES", 
   joinColumns = @JoinColumn(name = "user_id"), 
   inverseJoinColumns = @JoinColumn(name = "role_id"))
