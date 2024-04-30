@@ -16,6 +16,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests((request) -> request
                 .requestMatchers(HttpMethod.POST, "/user/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/parking-spot/**")
+                .permitAll()
                 .anyRequest()
                 .authenticated());
     return http.build();
