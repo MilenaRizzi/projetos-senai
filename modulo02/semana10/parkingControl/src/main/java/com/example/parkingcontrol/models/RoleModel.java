@@ -12,27 +12,21 @@ import jakarta.persistence.Table;
 @Table(name = "TB_ROLE")
 public class RoleModel {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private UUID id_role;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id_role;
+    private String name;
 
-  private String name;
-
-
-  public UUID getId_role() {
-    return this.id_role;
-  }
-
-  public void setId_role(UUID id_role) {
-    this.id_role = id_role;
-  }
-
-  public String getName() {
-    return this.name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
+    public UUID getId_role() {
+        return id_role;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setId_role(UUID id_role) {
+        this.id_role = id_role;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }    
 }
