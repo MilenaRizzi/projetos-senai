@@ -10,25 +10,22 @@ import com.example.parkingcontrol.repositories.UserRepository;
 
 @Service
 public class UserService {
-  
-  @Autowired
-  UserRepository userRepository;
+    
+    @Autowired
+    UserRepository userRepository;
 
+    public UserModel saveUser(UserModel userModel) {
+        UserModel existUser = userRepository.findByUsername(userModel.getUsername());
 
-  public UserModel saveUser(UserModel userModel) {
-    UserModel existUser = userRepository.findByUserName(userModel.getUserName());
+        if(existUser != null){
+            throw new Error("Usuário já existe!");
+        }
 
-    if (existUser != null) {
-      throw new Error("Usuário já existe!");
+        userModel.setPassword(passwordEncoder().encode(userModel.getPassword()));
+        return userRepository.save(userModel);
     }
-    //antes de armazenar usuário vamos codificar a senha
-    userModel.setPassword(passwordEncoder().encode(userModel.getPassword()));
-    return userRepository.save(userModel);
-  }
 
-
-  //método para aplica a codificação na senha do usuário
-  public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder();
-  }
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
 }
