@@ -16,12 +16,13 @@ import com.example.parkingcontrol.services.UserService;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/user")
 public class UserController {
-  
-  @Autowired
-  UserService userService;
 
-  @PostMapping
-  public ResponseEntity<Object> saveUser(@RequestBody UserModel userModel){
-    return ResponseEntity.status(HttpStatus.CREATED).body(userService.saveUser(userModel));
-  }
+    @Autowired
+    UserService userService;
+
+    @PostMapping
+    public ResponseEntity<Object> saveUser(@RequestBody UserModel userModel){
+        return ResponseEntity.status(HttpStatus.CREATED).body(userService.saveUser(userModel));
+    }
+    
 }
