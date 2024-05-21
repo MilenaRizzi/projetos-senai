@@ -6,6 +6,7 @@ import java.util.List;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,8 @@ import com.senai.imobiliaria.model.Imovel;
 import com.senai.imobiliaria.service.ImovelService;
 
 import jakarta.validation.Valid;
-@Validated 
+
+@Validated
 @RestController
 @RequestMapping("imoveis")
 public class ImovelController {
@@ -34,6 +36,7 @@ public class ImovelController {
   @Autowired
   private ModelMapper mapper;
 
+  @PreAuthorize("hasRole('PARKING_INSERT')")
   @PostMapping
   public ResponseEntity<ImovelResponse> cadastrar(@RequestBody @Valid ImovelRequest request) {
     Imovel imovel = mapper.map(request, Imovel.class);
@@ -42,6 +45,7 @@ public class ImovelController {
     return ResponseEntity.created(URI.create(imovel.getCodigo().toString())).body(resp);
   }
 
+  @PreAuthorize("hasRole('PARKING_SELECT')")
   @GetMapping
   public ResponseEntity<List<ImovelResponse>> listar() {
     var imoveis = service.consultar();
@@ -49,6 +53,7 @@ public class ImovelController {
     return ResponseEntity.ok().body(resp);
   }
 
+  @PreAuthorize("hasRole('PARKING_SELECT')")
   @GetMapping("{codigo}")
   public ResponseEntity<ImovelResponse> consultarPorCodigo(@PathVariable Integer codigo) {
     var imovel = service.consultar(codigo);
@@ -56,18 +61,21 @@ public class ImovelController {
     return ResponseEntity.ok().body(resp);
   }
 
+  @PreAuthorize("hasRole('PARKING_UPDATE')")
   @PutMapping("{codigo}")
-    public ResponseEntity<ImovelResponse> atualizar(@PathVariable Integer codigo, @RequestBody @Valid ImovelAtualizacaoRequest request) {
-        var imovel = mapper.map(request, Imovel.class);
-        imovel.setCodigo(codigo);
-        imovel = service.atualizar(imovel);
-        var resp = mapper.map(imovel, ImovelResponse.class);
-        return ResponseEntity.ok().body(resp);
-    }
+  public ResponseEntity<ImovelResponse> atualizar(@PathVariable Integer codigo,
+      @RequestBody @Valid ImovelAtualizacaoRequest request) {
+    var imovel = mapper.map(request, Imovel.class);
+    imovel.setCodigo(codigo);
+    imovel = service.atualizar(imovel);
+    var resp = mapper.map(imovel, ImovelResponse.class);
+    return ResponseEntity.ok().body(resp);
+  }
 
-    @DeleteMapping("{codigo}")
-    public ResponseEntity<?> excluir(@PathVariable Integer codigo) {
-        service.excluir(codigo);
-        return ResponseEntity.noContent().build();
-    }    
+  @PreAuthorize("hasRole('PARKING_DELETE')")
+  @DeleteMapping("{codigo}")
+  public ResponseEntity<?> excluir(@PathVariable Integer codigo) {
+    service.excluir(codigo);
+    return ResponseEntity.noContent().build();
+  }
 }
