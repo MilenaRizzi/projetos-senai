@@ -22,10 +22,10 @@ public class ImovelService {
     if (existe) {
       throw new RegistroExistenteException("Imovel com código já cadastrado");
     }
-    imovel.setDataCadastro(LocalDate.now());
     repository.save(imovel);
+    imovel.setDataCadastro(LocalDate.now());
   }
-
+  
   public List<Imovel> consultar() {
     return repository.findAll();
   }
