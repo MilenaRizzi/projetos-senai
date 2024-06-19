@@ -1,0 +1,31 @@
+version: '3'
+
+services: #definição dos serviços
+  database: # nome do serviço/container
+    image: 'postgres:latest' # imagem ou do docker hub ou local
+    ports:                   # faz a ponta entre a porta_externa:porta_interna
+      - 15432:5432           # 15432(sistema) -> 5432(docker)
+    environment:             # define as variáveis de ambiente do container, varia para cada imagem
+      POSTGRES_USER: username # The PostgreSQL user (useful to connect to the database)
+      POSTGRES_PASSWORD: password # The PostgreSQL password (useful to connect to the database)
+      POSTGRES_DB: default_database # The PostgreSQL default database (automatically created at first launch)
+
+    # networks:   # Rede interna ao docker, roteador interno
+    #   - postgres-network 
+    volumes: # volume de armazenamento de dados para o banco de dados
+      - ${PWD}/db-data/:/var/lib/postgresql/data/ #onde vamos armazenar os dados
+      # /var/lib/postgresql/data/(docker) -> máquina real 
+      # - ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql # script de criação dos dados
+  
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   ports:
+  #     - 15433:80
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - database
+  #   networks:
+  #     - postgres-network
+  #   volumes:
+  #     - ${PWD}/pgadmin-data/:/var/lib/pgadmin/
