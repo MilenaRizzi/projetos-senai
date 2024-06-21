@@ -15,7 +15,7 @@ public class PokemonVistoDTO {
   private String nome;
   
   @NotBlank
-  private String imagem;
+  private String imagem;  
   
   @NotBlank
   private String area;
