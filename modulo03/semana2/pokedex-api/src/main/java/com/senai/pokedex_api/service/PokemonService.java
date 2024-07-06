@@ -1,5 +1,6 @@
 package com.senai.pokedex_api.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,4 +38,26 @@ public class PokemonService {
       repository.save(pokemon);
     }
   }
+
+   public boolean atualiza(Pokemon pokemon) {
+    if (repository.existsById(pokemon.getNumero())) {
+      repository.save(pokemon);
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public void exclui(Integer numero) {
+    repository.deleteById(numero);
+  }
+
+  public Optional<Pokemon> busca(Integer numero) {
+    return repository.findById(numero);
+  }
+
+  public List<Pokemon> buscaTodos() {
+    return repository.findAll();
+  }
+
 }
